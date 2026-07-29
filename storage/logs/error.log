@@ -1,0 +1,445 @@
+[2026-06-30 20:30:14]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 20:30:18]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 20:32:49]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:41:36]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:41:41]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:42:03]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:42:04]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:42:06]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:42:07]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:43:59]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:44:00]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-06-30 22:44:01]
+Message: Testing Nexora Error Handler
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-07-01 11:18:03]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\Cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-02 11:14:50]
+Message: syntax error, unexpected token ","
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 63
+------------------------------------------------------------
+[2026-07-02 11:14:54]
+Message: syntax error, unexpected token ","
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 63
+------------------------------------------------------------
+[2026-07-02 11:15:24]
+Message: syntax error, unexpected token ","
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 63
+------------------------------------------------------------
+[2026-07-02 11:18:20]
+Message: syntax error, unexpected token ","
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 63
+------------------------------------------------------------
+[2026-07-08 13:12:55]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:12:58]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:12:59]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:13:17]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:13:18]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:13:19]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:13:26]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:13:27]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:14:27]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 13:14:29]
+Message: syntax error, unexpected token "else"
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 9
+------------------------------------------------------------
+[2026-07-08 14:37:21]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:37:24]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:37:55]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:37:57]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:37:57]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:37:58]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:37:59]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:38:00]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:38:01]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:38:01]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:38:56]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-08 14:38:57]
+Message: Undefined variable $name
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:20:33]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:20:37]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:20:38]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:20:38]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:20:39]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:36]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:37]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:38]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:38]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:39]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:39]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:22:39]
+Message: file_put_contents(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 67
+------------------------------------------------------------
+[2026-07-11 05:46:55]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:46:57]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:46:58]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:54]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:56]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:57]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:57]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:58]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:58]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:59]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:52:59]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:53:00]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:53:00]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:53:01]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:58:15]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:58:16]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:58:17]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:58:18]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:58:18]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 05:58:19]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 06:04:52]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 06:04:53]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 06:04:54]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-11 06:04:54]
+Message: include(../app/Cache/partials/header.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\app\cache\home.php
+Line: 1
+------------------------------------------------------------
+[2026-07-21 17:11:20]
+Message: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "index"
+File: C:\xampp\htdocs\nexora\app\Core\Router.php
+Line: 115
+------------------------------------------------------------
+[2026-07-21 17:11:21]
+Message: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "index"
+File: C:\xampp\htdocs\nexora\app\Core\Router.php
+Line: 115
+------------------------------------------------------------
+[2026-07-21 17:15:22]
+Message: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "index"
+File: C:\xampp\htdocs\nexora\app\Core\Router.php
+Line: 115
+------------------------------------------------------------
+[2026-07-22 15:13:02]
+Message: Undefined variable $request
+File: C:\xampp\htdocs\nexora\app\Core\Router.php
+Line: 116
+------------------------------------------------------------
+[2026-07-27 13:54:27]
+Message: Unclosed '{' on line 4
+File: C:\xampp\htdocs\nexora\app\Core\Container.php
+Line: 28
+------------------------------------------------------------
+[2026-07-28 12:12:25]
+Message: Undefined variable $router
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-07-28 12:13:12]
+Message: Undefined variable $router
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 19
+------------------------------------------------------------
+[2026-07-28 15:16:55]
+Message: Class "AuthController" not found
+File: C:\xampp\htdocs\nexora\app\Core\Router.php
+Line: 141
+------------------------------------------------------------
+[2026-07-28 16:27:09]
+Message: include(../app/Views/partials/navbar.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
+Line: 8
+------------------------------------------------------------
+[2026-07-28 16:27:27]
+Message: include(../app/Views/partials/navbar.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
+Line: 8
+------------------------------------------------------------
+[2026-07-28 16:27:28]
+Message: include(../app/Views/partials/navbar.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
+Line: 8
+------------------------------------------------------------
+[2026-07-28 16:31:19]
+Message: include(../resources/Views/partials/navbar.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
+Line: 8
+------------------------------------------------------------
+[2026-07-28 16:31:41]
+Message: include(../resources/views/partials/navbar.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
+Line: 8
+------------------------------------------------------------
+[2026-07-28 16:31:42]
+Message: include(../resources/views/partials/navbar.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
+Line: 8
+------------------------------------------------------------
