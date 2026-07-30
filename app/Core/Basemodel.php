@@ -11,6 +11,9 @@ abstract class BaseModel
         $this->database = new Database();
     }
 
+    /**
+     * Find record by ID
+     */
     public function find($id)
     {
         return $this->database->first(
@@ -19,6 +22,9 @@ abstract class BaseModel
         );
     }
 
+    /**
+     * Get all records
+     */
     public function all()
     {
         return $this->database->get(
@@ -26,6 +32,9 @@ abstract class BaseModel
         );
     }
 
+    /**
+     * Find one record by column
+     */
     public function where($column, $value)
     {
         return $this->database->first(
@@ -34,27 +43,74 @@ abstract class BaseModel
         );
     }
 
+    /**
+     * Create a new record
+     */
     public function create(array $data)
-{
-    $columns = array_keys($data);
+    {
+        $columns = array_keys($data);
 
-    $placeholders = array_fill(
-        0,
-        count($columns),
-        "?"
-    );
+        $placeholders = array_fill(
+            0,
+            count($columns),
+            "?"
+        );
 
-    $sql = "INSERT INTO {$this->table} (" .
-            implode(", ", $columns) .
-            ") VALUES (" .
-            implode(", ", $placeholders) .
-            ")";
+        $sql = "INSERT INTO {$this->table} (" .
+                implode(", ", $columns) .
+                ") VALUES (" .
+                implode(", ", $placeholders) .
+                ")";
 
-    $this->database->execute(
-        $sql,
-        array_values($data)
-    );
+        $this->database->execute(
+            $sql,
+            array_values($data)
+        );
 
-    return $this->database->lastInsertId();
-}
+        return $this->database->lastInsertId();
+    }
+
+    /**
+     * Update record
+     */
+    public function update($id, array $data)
+    {
+        $columns = [];
+
+        foreach ($data as $key => $value) {
+            $columns[] = "{$key} = ?";
+        }
+
+        $sql = "UPDATE {$this->table}
+                SET " . implode(", ", $columns) . "
+                WHERE id = ?";
+
+        $params = array_values($data);
+        $params[] = $id;
+
+        return $this->database->execute($sql, $params);
+    }
+
+    /**
+     * Delete record
+     */
+    public function delete($id)
+    {
+        return $this->database->execute(
+            "DELETE FROM {$this->table} WHERE id = ?",
+            [$id]
+        );
+    }
+
+    /**
+     * Count records
+     */
+    public function count()
+    {
+        $result = $this->database->first(
+            "SELECT COUNT(*) AS total FROM {$this->table}"
+        );
+
+        return $result['total'];
+    }
 }

@@ -443,3 +443,53 @@ Message: include(../resources/views/partials/navbar.php): Failed to open stream:
 File: C:\xampp\htdocs\nexora\resources\views\layouts\app.php
 Line: 8
 ------------------------------------------------------------
+[2026-07-29 15:01:26]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:01:29]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:01:30]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:01:54]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:01:56]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:02:20]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:03:13]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:35:59]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:36:06]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-29 15:36:17]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------

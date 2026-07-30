@@ -1,17 +1,40 @@
 <?php
 
-class AuthController
+class AuthController extends BaseController
 {
-    /**
-     * Show the login page.
-     */
-    public function login(Request $request)
+    private User $user;
+
+    public function __construct()
     {
-        return view("auth/login");
+        $this->user = new User();
     }
 
     /**
-     * Handle login.
+     * Show Login Page
+     */
+    public function login()
+    {
+        return $this->view("auth.login");
+    }
+
+    /**
+     * Show Registration Page
+     */
+    public function register()
+    {
+        return $this->view("auth.register");
+    }
+
+    /**
+     * Store New User
+     */
+    public function store(Request $request)
+    {
+
+    }
+
+    /**
+     * Login User
      */
     public function authenticate(Request $request)
     {
@@ -19,9 +42,9 @@ class AuthController
     }
 
     /**
-     * Logout user.
+     * Logout User
      */
-    public function logout(Request $request)
+    public function logout()
     {
 
     }

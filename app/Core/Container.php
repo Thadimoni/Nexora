@@ -2,6 +2,9 @@
 
 class Container
 {
+    /**
+     * Singleton instances.
+     */
     protected array $instances = [];
 
     /**
@@ -10,31 +13,52 @@ class Container
     protected array $services = [];
 
     /**
-     * Bind a service to the container.
+     * Register a normal service.
      */
-    public function bind($key, $service)
+    public function bind($key, $resolver)
     {
-        $this->services[$key] = $service;
+        $this->services[$key] = $resolver;
     }
 
     /**
      * Register a singleton service.
-         */
-     public function singleton($key, $service)
-     {
-            $this->instances[$key] = call_user_func($service);
-     }
+     */
+    public function singleton($key, $resolver)
+    {
+        $this->services[$key] = function () use ($key, $resolver) {
+
+            if (!isset($this->instances[$key])) {
+
+                $this->instances[$key] = call_user_func($resolver);
+
+            }
+
+            return $this->instances[$key];
+
+        };
+    }
 
     /**
      * Resolve a service.
      */
     public function make($class)
     {
-        // Return existing singleton instance
+        /*
+        |--------------------------------------------------------------------------
+        | Existing Singleton
+        |--------------------------------------------------------------------------
+        */
         if (isset($this->instances[$class])) {
+
             return $this->instances[$class];
+
         }
 
+        /*
+        |--------------------------------------------------------------------------
+        | Registered Binding
+        |--------------------------------------------------------------------------
+        */
         if (isset($this->services[$class])) {
 
             return call_user_func(
@@ -43,52 +67,48 @@ class Container
 
         }
 
+        /*
+        |--------------------------------------------------------------------------
+        | Auto Resolve
+        |--------------------------------------------------------------------------
+        */
         $reflection = new ReflectionClass($class);
+
+        if (!$reflection->isInstantiable()) {
+
+            throw new Exception(
+                "{$class} cannot be instantiated."
+            );
+
+        }
 
         $constructor = $reflection->getConstructor();
 
-        // No constructor? Just create the object
         if (is_null($constructor)) {
 
-            $object = new $class();
+            return new $class();
 
-            $this->instances[$class] = $object;
-
-            return $object;
         }
-
-        $parameters = $constructor->getParameters();
 
         $dependencies = [];
 
-        foreach ($parameters as $parameter) {
+        foreach ($constructor->getParameters() as $parameter) {
 
             $type = $parameter->getType();
 
-            // Primitive types cannot be resolved automatically
-            if ($type->isBuiltin()) {
+            if ($type === null || $type->isBuiltin()) {
 
                 throw new Exception(
-                    "Cannot resolve primitive dependency '" .
-                    $type->getName() .
-                    " $" .
-                    $parameter->getName() .
-                    "' while resolving {$class}."
+                    "Cannot resolve dependency {$parameter->getName()} while building {$class}."
                 );
+
             }
 
-            // Resolve dependency recursively
             $dependencies[] = $this->make(
                 $type->getName()
             );
         }
 
-        // Create the object
-        $object = new $class(...$dependencies);
-
-        // Store singleton instance
-        $this->instances[$class] = $object;
-
-        return $object;
+        return $reflection->newInstanceArgs($dependencies);
     }
 }

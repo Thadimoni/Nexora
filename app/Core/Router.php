@@ -35,8 +35,10 @@ class Router
         );
     }
 
-  public function dispatch($uri, $method)
+ public function dispatch($uri, $method)
 {
+    $container = new Container();
+
     foreach ($this->routes as $route) {
 
         // Break both URLs into segments
@@ -109,7 +111,7 @@ class Router
 
         case "auth":
 
-            $instance = new AuthMiddleware();
+            $instance = $container->make(AuthMiddleware::class);
 
             break;
 
@@ -137,13 +139,13 @@ class Router
         // Controller Route
         list($controller, $method) = explode('@', $action);
 
-        
-        $controller = new $controller();
+      $controller = $container->make($controller);
 
-       return call_user_func_array(
-       [$controller, $method],
-       [$request]
-);
+        return call_user_func_array(
+            [$controller, $method],
+            [$request]
+        );  
+
     }
 
     http_response_code(404);

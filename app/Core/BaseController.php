@@ -4,31 +4,62 @@ class BaseController
 {
     protected function view($view, $data = [])
     {
-        // Compile the requested view
         $compiler = new TemplateCompiler();
 
         $compiledView = $compiler->compile($view);
 
-        // Create the rendering engine
         $engine = new TemplateEngine();
 
-        // Render the child view first
         $content = $engine->render($compiledView, $data);
 
-        // Check if the view extends a layout
         $layout = $compiler->getLayout();
 
-        if ($layout)
-        {
-            // Compile the layout
+        if ($layout) {
+
             $compiledLayout = $compiler->compile($layout);
 
-            // Render the layout
             echo $engine->render($compiledLayout, $data);
-        }
-        else
-        {
+
+        } else {
+
             echo $content;
+
         }
+    }
+
+    /**
+     * Redirect to another page.
+     */
+    protected function redirect($url)
+    {
+        header("Location: {$url}");
+        exit;
+    }
+
+    /**
+     * Redirect back.
+     */
+    protected function back()
+    {
+        header(
+            "Location: " .
+            $_SERVER['HTTP_REFERER']
+        );
+
+        exit;
+    }
+
+    /**
+     * Return JSON.
+     */
+    protected function json($data, $status = 200)
+    {
+        http_response_code($status);
+
+        header("Content-Type: application/json");
+
+        echo json_encode($data);
+
+        exit;
     }
 }

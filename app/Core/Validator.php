@@ -103,4 +103,11 @@ class Validator
 
         return null;
     }
+
+    public function fails()
+    {
+       return !$this->passes();
+    }
+
+
 }
