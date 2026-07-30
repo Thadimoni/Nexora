@@ -6,25 +6,9 @@ class BaseController
     {
         $compiler = new TemplateCompiler();
 
-        $compiledView = $compiler->compile($view);
+        $engine = new TemplateEngine($compiler);
 
-        $engine = new TemplateEngine();
-
-        $content = $engine->render($compiledView, $data);
-
-        $layout = $compiler->getLayout();
-
-        if ($layout) {
-
-            $compiledLayout = $compiler->compile($layout);
-
-            echo $engine->render($compiledLayout, $data);
-
-        } else {
-
-            echo $content;
-
-        }
+        echo $engine->render($view, $data);
     }
 
     /**
@@ -41,11 +25,7 @@ class BaseController
      */
     protected function back()
     {
-        header(
-            "Location: " .
-            $_SERVER['HTTP_REFERER']
-        );
-
+        header("Location: " . $_SERVER['HTTP_REFERER']);
         exit;
     }
 

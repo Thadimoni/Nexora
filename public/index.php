@@ -11,7 +11,4 @@ require_once "../app/Bootstrap/Autoload.php";
 
 ErrorHandler::register();
 
-$db = new Database();
-$conn = $db->connect();
-
 App::run();

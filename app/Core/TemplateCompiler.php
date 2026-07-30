@@ -1,9 +1,9 @@
-<?php
+ <?php
 
 class TemplateCompiler
 {
-    protected $viewsPath = "../app/Views/";
-    protected $cachePath = "../app/Cache/";
+    protected string $viewsPath;
+    protected string $cachePath;
 
     protected $directives = [
         "@year" => "<?php echo date('Y'); ?>",
@@ -14,6 +14,15 @@ class TemplateCompiler
      */
     protected $layout = null;
 
+    public function __construct()
+    {
+        // app/Core -> app
+        $appPath = dirname(__DIR__);
+
+        $this->viewsPath = $appPath . "/Resources/Views/";
+        $this->cachePath = $appPath . "/Cache/";
+    }
+
     /**
      * Compile a .nex view into a PHP file.
      */
@@ -21,11 +30,25 @@ class TemplateCompiler
     {
         $this->reset();
 
+        // Convert dot notation to folder notation
+        $view = str_replace('.', '/', $view);
+
         $viewFile = $this->viewsPath . $view . ".nex";
         $compiledFile = $this->cachePath . $view . ".php";
 
         if (!file_exists($viewFile)) {
-            throw new Exception("View '{$view}' not found.");
+              echo "<pre>";
+            echo "View Path:\n";
+            echo $viewFile . "\n\n";
+
+            echo "Real Path:\n";
+            echo realpath($viewFile);
+            echo "\n\n";
+
+            echo "Exists? ";
+            var_dump(file_exists($viewFile));
+            echo "</pre>";
+            exit;  
         }
 
         $template = file_get_contents($viewFile);
@@ -38,7 +61,6 @@ class TemplateCompiler
 
         return $compiledFile;
     }
-
     /**
      * Returns the layout detected during compilation.
      */
@@ -194,7 +216,7 @@ class TemplateCompiler
 
                 $compiler->compile($view);
 
-                return "<?php require '../app/Cache/{$view}.php'; ?>";
+               return "<?php require '" . $this->cachePath . "{$view}.php'; ?>";
             },
             $template
         );
@@ -263,5 +285,10 @@ class TemplateCompiler
             },
             $template
         );
-    }
+     }
+        public function getCachePath()
+            {
+             return $this->cachePath;
+            }
+
 }

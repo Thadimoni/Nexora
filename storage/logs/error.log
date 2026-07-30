@@ -493,3 +493,48 @@ Message: Call to undefined method Database::connect()
 File: C:\xampp\htdocs\nexora\public\index.php
 Line: 15
 ------------------------------------------------------------
+[2026-07-30 19:26:36]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-30 19:31:13]
+Message: Call to undefined method Database::connect()
+File: C:\xampp\htdocs\nexora\public\index.php
+Line: 15
+------------------------------------------------------------
+[2026-07-30 19:44:03]
+Message: Class "HomeController" does not exist
+File: C:\xampp\htdocs\nexora\app\Core\Container.php
+Line: 75
+------------------------------------------------------------
+[2026-07-30 19:44:08]
+Message: Class "HomeController" does not exist
+File: C:\xampp\htdocs\nexora\app\Core\Container.php
+Line: 75
+------------------------------------------------------------
+[2026-07-30 19:44:11]
+Message: Class "HomeController" does not exist
+File: C:\xampp\htdocs\nexora\app\Core\Container.php
+Line: 75
+------------------------------------------------------------
+[2026-07-30 19:59:21]
+Message: View 'dashboard.index' not found.
+File: C:\xampp\htdocs\nexora\app\Core\TemplateCompiler.php
+Line: 28
+------------------------------------------------------------
+[2026-07-30 20:03:10]
+Message: View 'dashboard/index' not found.
+File: C:\xampp\htdocs\nexora\app\Core\TemplateCompiler.php
+Line: 31
+------------------------------------------------------------
+[2026-07-30 20:16:01]
+Message: View 'dashboard/index' not found.
+File: C:\xampp\htdocs\nexora\app\Core\TemplateCompiler.php
+Line: 31
+------------------------------------------------------------
+[2026-07-30 23:19:34]
+Message: Too few arguments to function TemplateEngine::__construct(), 0 passed in C:\xampp\htdocs\nexora\app\Core\BaseController.php on line 11 and exactly 1 expected
+File: C:\xampp\htdocs\nexora\app\Core\TemplateEngine.php
+Line: 28
+------------------------------------------------------------
