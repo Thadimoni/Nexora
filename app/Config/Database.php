@@ -149,4 +149,12 @@ class Database
 
         return $references;
     }
+
+    /**
+ * Return the mysqli connection.
+ */
+    public function connect()
+    {
+        return $this->connection;
+    }
 }

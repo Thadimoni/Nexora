@@ -1,0 +1,33 @@
+# Environment
+.env
+.env.*
+
+# Dependencies
+/vendor/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Runtime files
+storage/logs/
+storage/cache/
+
+# Local database dumps
+*.sql
+*.sqlite
+*.sqlite3
+
+# Testing
+test-*.php

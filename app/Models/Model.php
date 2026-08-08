@@ -1,73 +1,298 @@
 <?php
 
-class Model
+abstract class Model
 {
-    protected $db;
-    protected $conn;
+    /*
+    |--------------------------------------------------------------------------
+    | Model Properties
+    |--------------------------------------------------------------------------
+    */
 
-    protected $table;
+    protected Database $db;
+
+    protected mysqli $conn;
+
+    protected string $table;
+
+    protected ?int $id = null;
+
+    protected array $attributes = [];
+
+    protected QueryBuilder $query;
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Constructor
+    |--------------------------------------------------------------------------
+    */
 
     public function __construct()
     {
         $this->db = new Database();
+
         $this->conn = $this->db->connect();
+
+        $this->query = new QueryBuilder($this->table);
     }
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Attribute Access
+    |--------------------------------------------------------------------------
+    */
+
     /**
-     * Get all records
+     * Access model attributes.
+     */
+    public function __get($key)
+    {
+        if (array_key_exists($key, $this->attributes)) {
+            return $this->attributes[$key];
+        }
+
+        return $this->$key ?? null;
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Query Methods
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * Get all records.
      */
     public function all()
     {
-        $sql = "SELECT * FROM {$this->table}";
+        $results = $this->query->get();
 
-        $result = $this->conn->query($sql);
-
-        return $result->fetch_all(MYSQLI_ASSOC);
+        return array_map(
+            fn($result) => $this->hydrate($result),
+            $results
+        );
     }
 
+
     /**
-     * Find by ID
+     * Find a record by ID.
      */
     public function find($id)
     {
-        $stmt = $this->conn->prepare(
-            "SELECT * FROM {$this->table} WHERE id=?"
-        );
+        $result = $this->query
+            ->where("id", $id)
+            ->first();
 
-        $stmt->bind_param("i", $id);
+        if (!$result) {
+            return null;
+        }
 
-        $stmt->execute();
-
-        return $stmt->get_result()->fetch_assoc();
+        return $this->hydrate($result);
     }
 
+
     /**
-     * Delete Record
+     * Add a WHERE condition.
+     */
+    public function where($column, $operator, $value = null)
+    {
+        $this->query->where(
+            $column,
+            $operator,
+            $value
+        );
+
+        return $this;
+    }
+
+
+    /**
+     * Order results.
+     */
+    public function orderBy($column, $direction = "ASC")
+    {
+        $this->query->orderBy(
+            $column,
+            $direction
+        );
+
+        return $this;
+    }
+
+
+    /**
+     * Limit results.
+     */
+    public function limit($limit)
+    {
+        $this->query->limit($limit);
+
+        return $this;
+    }
+
+
+    /**
+     * Get query results.
+     */
+    public function get()
+    {
+        $results = $this->query->get();
+
+        return array_map(
+            fn($result) => $this->hydrate($result),
+            $results
+        );
+    }
+
+
+    /**
+     * Get the first result.
+     */
+    public function first()
+    {
+        $result = $this->query->first();
+
+        if (!$result) {
+            return null;
+        }
+
+        return $this->hydrate($result);
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CRUD
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * Create a new record.
+     */
+    public function create(array $data)
+    {
+        return $this->query->create($data);
+    }
+
+
+    /**
+     * Update a record.
+     */
+    public function update($id, array $data)
+    {
+        return $this->query->update(
+            $id,
+            $data
+        );
+    }
+
+
+    /**
+     * Delete a record.
      */
     public function delete($id)
     {
-        $stmt = $this->conn->prepare(
-            "DELETE FROM {$this->table} WHERE id=?"
-        );
-
-        $stmt->bind_param("i", $id);
-
-        return $stmt->execute();
+        return $this->query->delete($id);
     }
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Model Hydration
+    |--------------------------------------------------------------------------
+    */
+
     /**
-     * Find First Record By Column
+     * Convert database attributes into a model instance.
      */
-    public function where($column, $value)
+    protected function hydrate(array $attributes)
     {
-        $stmt = $this->conn->prepare(
-            "SELECT * FROM {$this->table} WHERE {$column}=? LIMIT 1"
+        $model = new static();
+
+        $model->attributes = $attributes;
+
+        if (isset($attributes["id"])) {
+            $model->id = (int) $attributes["id"];
+        }
+
+        return $model;
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * Get related records.
+     *
+     * Example:
+     * $student->hasMany(ExamAttempt::class, "student_id");
+     */
+    public function hasMany($model, $foreignKey)
+    {
+        $instance = new $model();
+
+        return $instance
+            ->where($foreignKey, $this->id)
+            ->get();
+    }
+
+
+    /**
+     * Get the parent model.
+     *
+     * Example:
+     * $attempt->belongsTo(Student::class, "student_id");
+     */
+    public function belongsTo($model, $foreignKey)
+    {
+        $instance = new $model();
+
+        return $instance->find(
+            $this->$foreignKey
         );
+    }
 
-        $stmt->bind_param("s", $value);
 
-        $stmt->execute();
+    /*
+    |--------------------------------------------------------------------------
+    | Helpers
+    |--------------------------------------------------------------------------
+    */
 
-        return $stmt->get_result()->fetch_assoc();
+    /**
+     * Count records.
+     */
+    public function count()
+    {
+        return $this->query->count();
+    }
+
+
+    /**
+     * Determine whether records exist.
+     */
+    public function exists()
+    {
+        return $this->query->exists();
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Static ORM API
+    |--------------------------------------------------------------------------
+    */
+
+    public static function __callStatic($method, $arguments)
+    {
+        $instance = new static();
+
+        return $instance->$method(...$arguments);
     }
 }

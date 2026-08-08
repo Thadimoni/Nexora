@@ -33,12 +33,12 @@ To build a modern, scalable, commercial assessment platform that can be used by:
 
 ## 🔄 Milestone 2 - Core Engine
 
-- [ ] Validator
-- [ ] Security
-- [ ] Authentication
-- [ ] Middleware
-- [ ] Base Model
-- [ ] Query Builder
+- [x] Validator
+- [x] Security
+- [x] Authentication
+- [x] Middleware
+- [x] Base Model
+- [x] Query Builder
 
 ---
 

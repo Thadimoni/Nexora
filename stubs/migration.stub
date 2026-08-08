@@ -1,0 +1,20 @@
+<?php
+
+class {{class}} extends Migration
+{
+    /**
+     * Run the migration.
+     */
+    public function up()
+    {
+        //
+    }
+
+    /**
+     * Reverse the migration.
+     */
+    public function down()
+    {
+        //
+    }
+}
